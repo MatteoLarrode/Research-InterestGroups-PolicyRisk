@@ -30,9 +30,25 @@ We formulate three hypotheses as to how interest groups behave to mitigate the r
 
 <p>
 This research integrates into a contemporary dynamic in the study of public policy that attributes a key role to interest groups in policy change. 
+</p>
+<p>
+Traditional policy feedback research shows how policies reinforce themselves over time. Processes of “path dependence” explain that once a policy course is set, it is difficult to reverse. The underlying dynamic is that policies reshape politics by changing interest groups’ and individuals’ resources, identities and preferences. As mentioned above, this phenomenon has recently been observed in the case of the European Union's biofuel policies.
+</p>
 
-The objective of this 
+<p>
+On the other hand, policy reversals can frequently be observed. Ongoing conflicts over policy, even after some have been passed that are expected to generate feedback, suggests that the “the capacity of public policies to remake politics is contingent, conditional, and contested” (Patashnik and Zelizer, 2013, 1072). This claim reveals the limits of policy feedback theory and motivates an alternative approach to studying policy change. 
+</p>
 
+<p>
+
+Leah Cardamore Stokes, in *Short circuiting policy: Interest groups and the battle over clean energy and climate policy in the American States*[^1], develops a framework placing interest groups at the center of policy change. Under this lens, she examines the conditionality of positive feedback and path dependence. Based on the argument that “Pressure politics is a method of short-circuiting the majority” (Schattschneider 1942, 189), she reveals the particular conditions and mechanisms through which interest groups “short circuit” policy by undermining and obscuring policy feedback[^2]. 
+
+</p>
+
+
+
+<p>
+The objective of this project is to gain a better understanding of the behaviour of interest groups - a driving force of policymaking - regarding innovative policies. Refining frameworks explaining policy change could be a step forward in limiting friction in public policy. On the one hand, better preparation for the possibility of an inefficient policy to "lock-in" would help limit their occurence. On the other hand, promoting the reinforcement of innovative policies on areas like clean energy could secure gains made in these domains characterised by quagmires and stalemate.
 </p>
 
 
@@ -73,3 +89,9 @@ The project at the core of this grant proposal
 *Salience:* Number of times the policy was mentioned in Roper Polls
 *Nascence:* First mention of the policy in Roper Polls
 *Ideological Distance:* Ideological distance from interest group's main focus
+
+
+## References
+[^1]: Stokes, L. C. (2020). *Short circuiting policy: Interest groups and the battle over clean energy and climate policy in the American States.* Oxford University Press, USA.
+
+[^2]: https://www.polsci.ucsb.edu/news/announcement/990
