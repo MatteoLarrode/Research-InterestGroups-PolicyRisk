@@ -1,4 +1,4 @@
-# Predictive model of interest groups' behaviour in the face of policy outcome undertainty
+# Predictive model of interest groups' behaviour in the face of policy outcome uncertainty
 
 ## Research Pitch 
 <p>
@@ -56,9 +56,9 @@ The project at the core of this grant proposal
 
 ## Data Collection
 
-### Energy Policy in the US (2011-2022)
+### Clean Energy Policy in the US (2011-2022)
 
-### Interest Groups activity in Energy Policy (2011-2022)
+### Interest Groups activity in Clean Energy Policy (2011-2022)
 
 
 
