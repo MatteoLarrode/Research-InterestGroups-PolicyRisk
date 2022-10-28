@@ -121,11 +121,21 @@ The main limitation of this project is the quality and quantity of data availabl
 </p>
 
 ### Hypotheses and Testable Predictions
+<p>
+
+**J = R - P + E**
+</p>
+
+<p>
+
+*Hypothesis H1:* Groups are more likely to join coalitions as the policy risk increases
+*Hypothesis H2:* Groups are less likely to join if political factors are favourable
+*Hypothesis H3:* Groups are more likely to join if the lobbying environment if unfavourable
+</p>
 
 
-
-
-**Improvement of Dependent Variable** <br/>
+### Empirical Logistics
+**Dependent Variable** <br/>
 
 
 **Improvement of Risk Index**<br/>
@@ -145,15 +155,6 @@ In addition to the risk factors - salience, nascence, ideological distance - we 
 | Main Independent Variable | R: Risk Index                                    | Calculated as the level of  salience, nascence and ideological  distance from the group to the policy                                         | Salience: collected from Roper polls  and NY Times data  Nascence: collected from Roper polls and NY Times data  Distance: collected from interviews,  board minutes and mission statements                                                    |
 | Control Variable          | P: Political factor index                        | Calculated as the ideology of the  party in power in the lobbied  chamber, level of party cohesion, and  public opinion of the party in power | Party in Power: Congressional  Quarterly's database on Party Strength and Control of Government  Party Cohesion: Congressional  Quarterly's database on Party Strength and Control of Government   Public Opinion: collected from  Roper polls |
 | Control Variable          | E: Lobbying environment                          | Measured from the number of groups  lobbying in opposiion, and the amount of money spent by groups in opposition                              | Number of Groups in Opposition: measure supplied by the Lobbyview  database  Amount of money spent: measure supplied by the Lobbyview  database                                                                                                |
-
-
-
-
-
-
-
-
-
 
 
 ## References
