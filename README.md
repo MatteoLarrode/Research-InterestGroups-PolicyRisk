@@ -88,8 +88,8 @@ We present the idea that interest groups interested in aligning with a particula
 
 ### Measures
 #### Independent Variables - Political Risk 
-*Salience:* Number of times the policy was mentioned in Roper Polls
-*Nascence:* First mention of the policy in Roper Polls
+*Salience:* Number of times the policy was mentioned in Roper Polls <br/>
+*Nascence:* First mention of the policy in Roper Polls <br/>
 
 <p>
 
