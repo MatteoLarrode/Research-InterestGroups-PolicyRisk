@@ -45,27 +45,34 @@ Leah Cardamore Stokes, in *Short circuiting policy: Interest groups and the batt
 
 </p>
 
-
-
 <p>
-The objective of this project is to gain a better understanding of the behaviour of interest groups - a driving force of policymaking - regarding innovative policies. Refining frameworks explaining policy change could be a step forward in limiting friction in public policy. On the one hand, better preparation for the possibility of an inefficient policy to "lock-in" would help limit their occurence. On the other hand, promoting the reinforcement of innovative policies on areas like clean energy could secure gains made in these domains characterised by quagmires and stalemate.
+
+The objective of this project is to gain a better understanding of the behaviour of interest groups - a driving force of policymaking - regarding innovative policies. Refining frameworks explaining policy change could be a step forward in limiting friction in public policy. On the one hand, better preparation for the possibility of an inefficient policy to "lock-in" would help limit their occurence. On the other hand, promoting the reinforcement of innovative policies on areas like clean energy could secure gains made in these domains characterised by quagmires and stalemate. **Are there ways of mitigating political risks for stakeholders in these situations of uncertainty where the benefits of covering unchartered waters outweigh the costs associated with potential drawbacks?**
 </p>
 
 
 ### The Objective: National Science Fundation Grant
-
-A double objective:
+This research project being carried out as a grant proposal, we must take into account the criteria of the NSF behind the attribution of grants. In this context, we must coordinate our efforts to further two objectives: 
 - *Quality of the research:* the grant allows to conduct research with an already solid theoretical base. The proposal must demonstrate that the data collected thanks to the allocated grant funds would be put to good use. 
 - *Salience of the issue:* the NSF prioritizes research that tackles salient issues under a novel perspective. The quality of the research conducted will be more impactful is the issue it investigates is of prime importance.
 
-<p>
-While designing the research project, we must not only 
 
+<p>
+A first iteration of the proposal studied the behaviour of interest groups in advocating various immigration policies in the US, depending on their associated levels of risk. This project was unfortunately not awarded the grant. However, the new iteration has been reframed and reworked using the valuable feedback received from the NSF. First, the project turned its attention away from immigration and in the direction of energy policy. This decision has been made to align with the redefinition of the scope studied by the proposal. Indeed, for this new iteration, observations in lobbying behaviour in the face of uncertain policy outcomes are being integrated into a broader framework of policy change theory. This new framework, inspired by L.C. Stokes' qualitative research, places interest groups as its key element and would benefit from quantitative support. We are confident that this change in scope and subject would be a better fit to attract the curiosity of NSF decision-makers.
 </p>
 
 ### Pilot Research
 <p>
-The project at the core of this grant proposal 
+The scope of this project seeks to answer the question raised above: "Are there ways of mitigating political risks for stakeholders in these situations of uncertainty where the benefits of covering unchartered waters outweigh the costs associated with potential drawbacks?". We present the idea that interest groups are more likely to align themselves with other groups in the presence of political risk in order to mitigate the costs of pursuing policy under conditions of high uncertainty and limited information. By joining the coalition, these groups maximize their ability to claim credit for pioneering new and innovative policy solutions while limiting their responsibility if the policy should prove damaging to their cause. 
+</p>
+<p>
+We operationalize a decision calculus that incorporates the risks associated with pursuing attractive but unchartered policy. We factor in the salience, nascence and ideological distance of the policies studied: 
+
+
+</p>
+
+<p>
+To help both the problem and the model proposed, we use data on recent sustainable energy policy in the US, the risk associated with lobbying across various issue dimensions, and its impact on interest group coalitions
 
 
 
@@ -89,6 +96,10 @@ The project at the core of this grant proposal
 *Salience:* Number of times the policy was mentioned in Roper Polls
 *Nascence:* First mention of the policy in Roper Polls
 *Ideological Distance:* Ideological distance from interest group's main focus
+
+
+## Limitations & follow-ups
+The main limitation of this project is the quality and quantity of data available on interest groups behaviour, especially on the formation of coalitions. Indeed, this proposal merely gives a glimpse of how interest groups react to uncertain policy outcomes as we use proxy variables for the formation of coalitions: the number of groups lobbying, number of times the policy is lobbied for, and the money spent on lobbying, depending on the model. The aim of this grant proposal is to correct this lack of information on the key actors of policy change that are interest groups, and on their activities. Resources allocated would allow to gather data on interest groups behaviour, and to further transparency and the advancement of crucial policies in deadlocked areas. 
 
 
 ## References
