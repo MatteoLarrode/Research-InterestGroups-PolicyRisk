@@ -77,10 +77,6 @@ We present the idea that interest groups interested in aligning with a particula
 - Ideological distance: riskier policies will be those that fall outside the group's operational wheelhouse
 </p>
 
-<p>
-In addition to these risk factors, we also include measures of various control variables which may contribute to the decision groups make to either join or not join lobbying coalitions. Those include measures of political climate and of the lobbying environment. These considerations are taken as controls as they do not interact with the risk index, but are rather factors of their own.
-</p>
-
 **Hypotheses and Testable Predictions**
 
 <p>
@@ -94,7 +90,6 @@ In addition to these risk factors, we also include measures of various control v
 #### Independent Variables - Political Risk 
 *Salience:* Number of times the policy was mentioned in Roper Polls
 *Nascence:* First mention of the policy in Roper Polls
-*Ideological Distance:* Ideological distance from interest group's main focus
 
 <p>
 
@@ -120,8 +115,45 @@ In addition to these risk factors, we also include measures of various control v
 
 
 
-## Limitations & follow-ups
+## Follow-up with NSF funding
+<p>
 The main limitation of this project is the quality and quantity of data available on interest groups behaviour, especially on the formation of coalitions. Indeed, this proposal merely gives a glimpse of how interest groups react to uncertain policy outcomes as we use proxy variables for the formation of coalitions: the number of groups lobbying, number of times the policy is lobbied for, and the money spent on lobbying, depending on the model. The aim of this grant proposal is to correct this lack of information on the key actors of policy change that are interest groups, and on their activities. Resources allocated would allow to gather data on interest groups behaviour, and to further transparency and the advancement of crucial policies in deadlocked areas. 
+</p>
+
+### Hypotheses and Testable Predictions
+
+
+
+
+**Improvement of Dependent Variable** <br/>
+
+
+**Improvement of Risk Index**<br/>
+<p>
+Adding ideological distance
+</p>
+
+**Adding control variables** </br>
+<p>
+In addition to the risk factors - salience, nascence, ideological distance - we also include measures of various control variables which may contribute to the decision groups make to either join or not join lobbying coalitions. Those include measures of political climate and of the lobbying environment. These considerations are taken as controls as they do not interact with the risk index, but are rather factors of their own.
+</p>
+
+*Table X: Variable Definition*
+| Term                      | Definition                                       | Operationalization                                                                                                                            | Source                                                                                                                                                                                                                                         |
+|---------------------------|--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dependent Variable        | J (binary): to join or  not to join a coalition  | The decision of groups to join a lobbying coalition or not                                                                                    | Collected from interview data                                                                                                                                                                                                                  |
+| Main Independent Variable | R: Risk Index                                    | Calculated as the level of  salience, nascence and ideological  distance from the group to the policy                                         | Salience: collected from Roper polls  and NY Times data  Nascence: collected from Roper polls and NY Times data  Distance: collected from interviews,  board minutes and mission statements                                                    |
+| Control Variable          | P: Political factor index                        | Calculated as the ideology of the  party in power in the lobbied  chamber, level of party cohesion, and  public opinion of the party in power | Party in Power: Congressional  Quarterly's database on Party Strength and Control of Government  Party Cohesion: Congressional  Quarterly's database on Party Strength and Control of Government   Public Opinion: collected from  Roper polls |
+| Control Variable          | E: Lobbying environment                          | Measured from the number of groups  lobbying in opposiion, and the amount of money spent by groups in opposition                              | Number of Groups in Opposition: measure supplied by the Lobbyview  database  Amount of money spent: measure supplied by the Lobbyview  database                                                                                                |
+
+
+
+
+
+
+
+
+
 
 
 ## References
