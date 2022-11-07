@@ -64,7 +64,8 @@ A first iteration of the proposal studied the behaviour of interest groups in ad
 
 ##  Model interest groups' behaviour regarding clean energy policy in the US
 <p>
-The scope of this project seeks to answer the question raised above: "Are there ways of mitigating political risks for stakeholders in these situations of uncertainty where the benefits of covering unchartered waters outweigh the costs associated with potential drawbacks?". We present the idea that interest groups are more likely to align themselves with other groups in the presence of political risk in order to mitigate the costs of pursuing policy under conditions of high uncertainty and limited information. By joining the coalition, these groups maximize their ability to claim credit for pioneering new and innovative policy solutions while limiting their responsibility if the policy should prove damaging to their cause. To help illustrate both the problem and the model proposed, we use data on recent sustainable energy policy in the US, the risk associated with lobbying across various issue dimensions, and its impact on interest group coalitions.
+
+To help illustrate both the problem and the model proposed, we use data on recent sustainable energy policy in the US, the risk associated with lobbying across various issue dimensions, and its impact on interest group coalitions. We present the idea that interest groups are more likely to align themselves with other groups in the presence of political risk in order to mitigate the costs of pursuing policy under conditions of high uncertainty and limited information. By joining the coalition, these groups maximize their ability to claim credit for pioneering new and innovative policy solutions while limiting their responsibility if the policy should prove damaging to their cause. To help illustrate both the problem and the model proposed, we use data on recent sustainable energy policy in the US, the risk associated with lobbying across various issue dimensions, and its impact on interest group coalitions. More specifically, we test the hypothesis that, *as the risk bore by a policy increases, interest groups will tend to form coalitions when advocating for it*. 
 </p>
 
 **Theoretical Contrinution: Defining Political Risk:**
@@ -72,47 +73,51 @@ The scope of this project seeks to answer the question raised above: "Are there 
 <p>
 
 We present the idea that interest groups interested in aligning with a particular position perform a decision calculus that takes into account two primary factors:
-- Salience: according to the literature, more salient policies are generally more attractive to groups given that they offer big-ticket gains in terms of visibility. However, should a group pursue the wrong policy, visibility becomes more of a liability since the group will receive backlash as a result of misguided policy puisuits. 
-- Nascence: this variable allows us to account for the amount of information available in the issue topic. One that is relatively new will more than likely have less information regarding its potential outcomes over one that has been implemeneted and evaluated in the past. Riskier issues will thus be newer ones, where less information is available. However, the pursuit of newer policies remains attractive to groups who can claim a leadership role in spearheading new legislation.
+- *Salience*: according to the literature, more salient policies are generally more attractive to groups given that they offer big-ticket gains in terms of visibility. However, should a group pursue the wrong policy, visibility becomes more of a liability since the group will receive backlash as a result of misguided policy puisuits. 
+- *Nascence*: this variable allows us to account for the amount of information available in the issue topic. One that is relatively new will more than likely have less information regarding its potential outcomes over one that has been implemeneted and evaluated in the past. Riskier issues will thus be newer ones, where less information is available. However, the pursuit of newer policies remains attractive to groups who can claim a leadership role in spearheading new legislation.
 </p>
 
 ### Measures
-#### Independent Variables - Political Risk 
 <p>
-
-Searching the publicly available [Congressional Record](https://www.congress.gov) and using terminology found in national polling surveys compiled by the Roper Center, we identified 8 subtopics of varying salience in the policy area of energy: renewable energy, solar power, hydropower, biofuels, nuclear power, hydropower, fossil fuels and electric vehicles.
-
-Searching national level surveys, we can measure variables acting as proxies for the political risk associated to the policy subtopic: 
-
-- *Salience:* Number of times the policy was mentioned in Roper Polls <br/>
-- *Nascence:* First mention of the policy in Roper Polls <br/>
-
+As illustrated by the example of biofuel policies in the EU mentioned above, and by its central place in L.C Stokes' work, energy policy is at the heart of the issue of interest group activity regarding risky policies. Indeed, as a STEM-related policy area, innovation and advancements in technology rapidly change their policies and practices.
 </p>
-
-#### Dependent Variables - Interest Groups Activities (2011-2022)
 
 <p>
 
-The next round of data collection utilizes resources gathered from the Federal Lobbying Disclosure Act; namely, [federal lobbying reports](https://disclosurespreview.house.gov/?index=%22lobbying-disclosures%22&size=10&from=10&keyword=%22fossil%20fuels%22&sort=[{%22_score%22:true},{%22field%22:%22registrant.name%22,%22order%22:%22asc%22}]) supplied by the US Senate's Office for Public Records.
-
+Searching the publicly available [Congressional Record](https://www.congress.gov) and using terminology found in national polling surveys compiled by the Roper Center, we identified 8 subtopics of varying salience in the policy area of energy: renewable energy, solar power, hydropower, biofuels, nuclear power, hydropower, fossil fuels and electric vehicles. We collected data on all mentions of those specific legislation subject areas, over a span of ten years, from 2011-2021.
 </p>
 
+*Independent Variables - Political Risk*
+<p>
+To provide a measure of salience by subtopic, we found the number of times each subtopic was mentioned in the Roper Polls (between 2011-2021). For nascence, the measure consisted of the number of years the subtopic was present in the polls. Both those variables are included in the calculus performed by interest groups to get an understanding of the level of risk associated to the policy.
+</p>
 
-**First Model:** Number of groups lobbying <br/>
-**Second Model:** Number of times the policy is lobbied for <br/>
-**Third Model:** Money spent on lobbying <br/>
+*Dependent Variables - Interest Groups Activities (2011-2022)*
+
+<p>
+
+The next round of data collection utilizes resources gathered from the Federal Lobbying Disclosure Act; namely, [federal lobbying reports](https://disclosurespreview.house.gov/?index=%22lobbying-disclosures%22&size=10&from=10&keyword=%22fossil%20fuels%22&sort=[{%22_score%22:true},{%22field%22:%22registrant.name%22,%22order%22:%22asc%22}]) supplied by the US Senate's Office for Public Records. 
+</p>
+
+<p>
+Both measures of political risk were regressed on three separate dependent variables, which correspond to the three models below. Given that we have no measure of groups' individual choices to lobby in coalition or alone, we used three proxy measures as our dependent variables. <be/> 
+In Model 1, we test the effect of salience and nascence of each subtopic on the number of groups lobbying within that same issue topic, using a negative binomial regression model. <br/>
+In Model 2, we test the effect of salience and nascence on the total number of times groups lobbied within the issue area, also using negative binomial regression analysis. <br/>
+Finally, in Model 2, we test the salience and nascence components of the risk model on the average amount spent on lobbying, using an ordinary least-squared regression (OLS) model.
+</p>
 
 
 ### Findings of Regression Models 
+<p>
+The most important model we present is Model 1, where we test whether salience and nascence have an effect on the toal number of groups lobbying within the issue area.
+</p>
 
 
 
 
 ## Follow-up with NSF funding
-<p>
-The main limitation of this project is the quality and quantity of data available on interest groups behaviour, especially on the formation of coalitions. Indeed, this proposal merely gives a glimpse of how interest groups react to uncertain policy outcomes as we use proxy variables for the formation of coalitions: the number of groups lobbying, number of times the policy is lobbied for, and the money spent on lobbying, depending on the model. The aim of this grant proposal is to correct this lack of information on the key actors of policy change that are interest groups, and on their activities. Resources allocated would allow to gather data on interest groups behaviour, and to further transparency and the advancement of crucial policies in deadlocked areas. 
+This pilot research makes use of incomplete data with respect to the scope of our project. As a result, it only gives a glimpse of how interest groups react to uncertain policy outcomes. The aim of this grant proposal is to correct this lack of information on the key actors of policy change that are interest groups, and on their activities. Resources allocated would allow to gather data on interest groups behaviour, and to further transparency and the advancement of crucial policies in deadlocked areas. Here is what our project would be improved with NSF funding.
 </p>
-
 
 ### Empirical Logistics Improvements
 **Dependent Variable** <br/>
@@ -149,12 +154,15 @@ The improvement of the risk factor thanks to the addition of the variable for id
 
 <p>
 
-The above rational calculus eads to the following hypotheses:
+The above rational calculus leads to the following hypotheses:
 - *Hypothesis H1:* Groups are more likely to join coalitions as the policy risk increases
 - *Hypothesis H2:* Groups are less likely to join if political factors are favourable
 - *Hypothesis H3:* Groups are more likely to join if the lobbying environment if unfavourable
 </p>
 
+<p>
+Though the data collected is incomplete with respect to the scope of the project, the analyses that we ran based on the data available not only lend promise to the validity of our theory, but also justify the reason why more data needs to be collected.
+</p>
 
 
 
