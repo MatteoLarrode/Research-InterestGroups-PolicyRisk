@@ -1,5 +1,5 @@
-#Confit
-.config.py
+#api
+config.py
 
 # History files
 .Rhistory
