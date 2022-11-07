@@ -59,7 +59,7 @@ This research project being carried out as a grant proposal, we must take into a
 
 
 <p>
-A first iteration of the proposal studied the behaviour of interest groups in advocating various immigration policies in the US, depending on their associated levels of risk. This project was unfortunately not awarded the grant. However, the new iteration has been reframed and reworked using the valuable feedback received from the NSF. First, the project turned its attention away from immigration and in the direction of energy policy. This decision has been made to align with the redefinition of the scope studied by the proposal. Indeed, for this new iteration, observations in lobbying behaviour in the face of uncertain policy outcomes are being integrated into a broader framework of policy change theory. This new framework, inspired by L.C. Stokes' qualitative research, places interest groups as its key element and would benefit from quantitative support. We are confident that this change in scope and subject would be a better fit to attract the curiosity of NSF decision-makers.
+A first iteration of the proposal studied the behaviour of interest groups in advocating various immigration policies in the US, depending on their associated levels of risk. This project was unfortunately not awarded the grant. However, the new iteration has been reframed and reworked using the valuable feedback received from the NSF. First, the project turned its attention away from immigration and in the direction of energy policy. Moreover, for this new iteration, observations in lobbying behaviour in the face of uncertain policy outcomes are being integrated into a broader framework of policy change theory. This new framework is inspired by L.C. Stokes' qualitative research placing interest groups as its key element. Our research would bring quantiative support to this framework, more precisely to its "fog of enactment" component.
 </p>
 
 ##  Model interest groups' behaviour regarding clean energy policy in the US
@@ -71,39 +71,32 @@ The scope of this project seeks to answer the question raised above: "Are there 
 
 <p>
 
-We present the idea that interest groups interested in aligning with a particular position perform a decision calculus that takes into account three primary factors:
+We present the idea that interest groups interested in aligning with a particular position perform a decision calculus that takes into account two primary factors:
 - Salience: according to the literature, more salient policies are generally more attractive to groups given that they offer big-ticket gains in terms of visibility. However, should a group pursue the wrong policy, visibility becomes more of a liability since the group will receive backlash as a result of misguided policy puisuits. 
 - Nascence: this variable allows us to account for the amount of information available in the issue topic. One that is relatively new will more than likely have less information regarding its potential outcomes over one that has been implemeneted and evaluated in the past. Riskier issues will thus be newer ones, where less information is available. However, the pursuit of newer policies remains attractive to groups who can claim a leadership role in spearheading new legislation.
-- Ideological distance: riskier policies will be those that fall outside the group's operational wheelhouse
 </p>
-
-**Hypotheses and Testable Predictions**
-
-<p>
-
-</p>
-
-
-
 
 ### Measures
 #### Independent Variables - Political Risk 
-*Salience:* Number of times the policy was mentioned in Roper Polls <br/>
-*Nascence:* First mention of the policy in Roper Polls <br/>
-
 <p>
 
-**Clean Energy Policy in the US (2011-2022)** <br/>
+Searching the publicly available [Congressional Record](https://www.congress.gov) and using terminology found in national polling surveys compiled by the Roper Center, we identified 8 subtopics of varying salience in the policy area of energy: renewable energy, solar power, hydropower, biofuels, nuclear power, hydropower, fossil fuels and electric vehicles.
+
+Searching national level surveys, we can measure variables acting as proxies for the political risk associated to the policy subtopic: 
+
+- *Salience:* Number of times the policy was mentioned in Roper Polls <br/>
+- *Nascence:* First mention of the policy in Roper Polls <br/>
 
 </p>
 
-#### Dependent Variables - Interest Groups Activities
+#### Dependent Variables - Interest Groups Activities (2011-2022)
 
 <p>
 
-**Interest Groups activity in Clean Energy Policy (2011-2022)** <br/>
+The next round of data collection utilizes resources gathered from the Federal Lobbying Disclosure Act; namely, [federal lobbying reports](https://disclosurespreview.house.gov/?index=%22lobbying-disclosures%22&size=10&from=10&keyword=%22fossil%20fuels%22&sort=[{%22_score%22:true},{%22field%22:%22registrant.name%22,%22order%22:%22asc%22}]) supplied by the US Senate's Office for Public Records.
 
 </p>
+
 
 **First Model:** Number of groups lobbying <br/>
 **Second Model:** Number of times the policy is lobbied for <br/>
@@ -120,27 +113,16 @@ We present the idea that interest groups interested in aligning with a particula
 The main limitation of this project is the quality and quantity of data available on interest groups behaviour, especially on the formation of coalitions. Indeed, this proposal merely gives a glimpse of how interest groups react to uncertain policy outcomes as we use proxy variables for the formation of coalitions: the number of groups lobbying, number of times the policy is lobbied for, and the money spent on lobbying, depending on the model. The aim of this grant proposal is to correct this lack of information on the key actors of policy change that are interest groups, and on their activities. Resources allocated would allow to gather data on interest groups behaviour, and to further transparency and the advancement of crucial policies in deadlocked areas. 
 </p>
 
-### Hypotheses and Testable Predictions
-<p>
 
-**J = R - P + E**
-</p>
-
-<p>
-
-*Hypothesis H1:* Groups are more likely to join coalitions as the policy risk increases
-*Hypothesis H2:* Groups are less likely to join if political factors are favourable
-*Hypothesis H3:* Groups are more likely to join if the lobbying environment if unfavourable
-</p>
-
-
-### Empirical Logistics
+### Empirical Logistics Improvements
 **Dependent Variable** <br/>
-
+<p>
+To identify interest group behaviour, such as their tendency to join coalitions, funding would allow a more thorough data collection instead of using proxies like we have done in this pilot project. After having identified the top organizations based on the number of times groups testify in Capitol Hill hearings, rounds of interviews will be conducted to collect data from their representatives. The questions would focus on interest groups' lobbying resources, organizational structure, organizational age, and coalition membership.
+</p>
 
 **Improvement of Risk Index**<br/>
 <p>
-Adding ideological distance
+Adding ideological distance: a major constraint to group activity regarding policy initiation and advocacy lies within the internal structure and membership of the organization. Groups are often tempted to pursue policies to please their member base against the wishes of the advisory board, who have often a better assessment of the cost v. benefits of various policy pursuits. As a result, riskier policies will be those that fall outside the group's operational wheelhouse.
 </p>
 
 **Adding control variables** </br>
@@ -155,6 +137,26 @@ In addition to the risk factors - salience, nascence, ideological distance - we 
 | Main Independent Variable | R: Risk Index                                    | Calculated as the level of  salience, nascence and ideological  distance from the group to the policy                                         | Salience: collected from Roper polls  and NY Times data  Nascence: collected from Roper polls and NY Times data  Distance: collected from interviews,  board minutes and mission statements                                                    |
 | Control Variable          | P: Political factor index                        | Calculated as the ideology of the  party in power in the lobbied  chamber, level of party cohesion, and  public opinion of the party in power | Party in Power: Congressional  Quarterly's database on Party Strength and Control of Government  Party Cohesion: Congressional  Quarterly's database on Party Strength and Control of Government   Public Opinion: collected from  Roper polls |
 | Control Variable          | E: Lobbying environment                          | Measured from the number of groups  lobbying in opposiion, and the amount of money spent by groups in opposition                              | Number of Groups in Opposition: measure supplied by the Lobbyview  database  Amount of money spent: measure supplied by the Lobbyview  database                                                                                                |
+
+### Hypotheses and Testable Predictions
+<p>
+The improvement of the risk factor thanks to the addition of the variable for ideological distance, and the addition of control variables will allow to present a simplified rational calculus for joining a lobbying coalition:
+</p>
+<p>
+
+**J = R - P + E**
+</p>
+
+<p>
+
+The above rational calculus eads to the following hypotheses:
+- *Hypothesis H1:* Groups are more likely to join coalitions as the policy risk increases
+- *Hypothesis H2:* Groups are less likely to join if political factors are favourable
+- *Hypothesis H3:* Groups are more likely to join if the lobbying environment if unfavourable
+</p>
+
+
+
 
 
 ## References
