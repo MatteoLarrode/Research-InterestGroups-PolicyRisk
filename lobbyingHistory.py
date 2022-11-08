@@ -1,14 +1,11 @@
 import requests
 import json
 import pandas as pd
-import datetime as dt
 
 from config import api_key
 
-lobbying_history = {}
-
-subtopic = "biofuels"
-subtopic_edited = "biofuels"
+subtopic = "deportation"
+subtopic_edited = "deportation"
 
 url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=%s&filing_dt_posted_before=%s&filing_specific_lobbying_issues=%s" %("2011-01-01", "2021-12-31", subtopic)
 headers= {"Authorization": api_key}
@@ -18,6 +15,7 @@ is_first = True
 
 #!! max items per page = 25 
     # SO if want a dictionary with everything: iterate from all the pages (using the 'next') 
+    # => RECURSION
 
 def get_filings(url, is_first):
     response = requests.request("GET", url, headers=headers, data = payload).json()
@@ -31,7 +29,11 @@ def get_filings(url, is_first):
     #gather page's useful data into a dict
     dict = {}
     for item in response['results']:
-        dict[item['filing_uuid']] = [item['registrant']['name'], item['expenses'], item['dt_posted'], item['filing_year']]
+        if item['filing_uuid'] in dict.keys():
+            print("Double filing uuid")
+    
+        else:
+            dict[item['filing_uuid']] = [item['registrant']['name'], item['expenses'], item['dt_posted'], item['filing_year']]
     
     #turn this dict into a pandas df
     a1 = pd.DataFrame.from_dict(dict, orient='index')
@@ -52,7 +54,3 @@ def get_filings(url, is_first):
 #call the recursion on the original api & turn it into a csv
 df = get_filings(url, is_first)
 df.to_csv(f"{subtopic_edited}1.csv")
-
-print(df)
-
-
