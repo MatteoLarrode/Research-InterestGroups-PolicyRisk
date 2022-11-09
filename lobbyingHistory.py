@@ -30,7 +30,7 @@ def get_filings(url, is_first):
     dict = {}
     for item in response['results']:
         if item['filing_uuid'] in dict.keys():
-            print("Double filing uuid")
+            print( str(item['registrant']['name']) + str(item['expenses']) + str(item['filing_year']))
     
         else:
             dict[item['filing_uuid']] = [item['registrant']['name'], item['expenses'], item['dt_posted'], item['filing_year']]
@@ -54,3 +54,4 @@ def get_filings(url, is_first):
 #call the recursion on the original api & turn it into a csv
 df = get_filings(url, is_first)
 df.to_csv(f"{subtopic_edited}1.csv")
+
