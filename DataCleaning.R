@@ -5,12 +5,13 @@ library(dplyr)
 deportation_df <- read_csv("deportation1.csv")
 
 #clean dataset (take care of NAs, change date format)
+deportation_df <- select(deportation_df, -1)
 deportation_df <- deportation_df %>%
-  rename(filing_uuid = 1, 
-         registrant_name = 2,
-         amount_reported = 3,
-         date_posted = 4,
-         filing_year = 5) %>%
+  rename(registrant_name = 1,
+  client_name = 2,
+  amount_reported = 3,
+  date_posted = 4,
+  filing_year = 5) %>%
   replace(is.na(.), 0) %>%
   mutate(date_posted = as.Date(date_posted))
 
