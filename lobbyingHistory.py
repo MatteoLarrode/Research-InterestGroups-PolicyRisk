@@ -30,11 +30,8 @@ def get_filings(url, is_first):
     dict = {}
     for item in response['results']:
         if item['filing_uuid'] not in dict.keys():
-            print(str(item['registrant']['name']) + str(item['expenses']) + str(item['filing_year']))
-    
-        else:
             dict[item['filing_uuid']] = [item['registrant']['name'], item['client']['name'], item['expenses'], item['dt_posted'], item['filing_year']]
-    
+   
     #turn this dict into a pandas df
     a1 = pd.DataFrame.from_dict(dict, orient='index')
     
@@ -54,4 +51,3 @@ def get_filings(url, is_first):
 #call the recursion on the original api & turn it into a csv
 df = get_filings(url, is_first)
 df.to_csv(f"{subtopic_edited}1.csv")
-
