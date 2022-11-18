@@ -8,7 +8,7 @@ from config import api_key
 subtopic_edited = "electric_vehicles"
 
 #url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=%s&filing_dt_posted_before=%s&filing_specific_lobbying_issues=%s" %("2011-01-01", "2021-12-31", subtopic)
-url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=2011-01-01&filing_dt_posted_before=2021-12-31&filing_specific_lobbying_issues=%22electric+cars%22+OR+%22electric+vehicles%22"
+url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=2011-01-01&filing_dt_posted_before=2021-12-31&filing_specific_lobbying_issues=%22fossil+fuels%22+OR+%22fossil+energy%22"
 
 headers= {"Authorization": api_key}
 payload = {}
