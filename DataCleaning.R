@@ -37,9 +37,13 @@ processDataset <- function(df){
 }
 
 
-final_df <- rbind(processDataset("wind.csv"), 
+final_df <- rbind(processDataset("wind_power.csv"), 
+                  processDataset("solar_power.csv"), 
                   processDataset("hydropower.csv"),
                   processDataset("electric_vehicles.csv"),
-                  processDataset("biofuels.csv"))
+                  processDataset("biofuels.csv"),
+                  processDataset("renewable_energy.csv"),
+                  processDataset("nuclear_energy.csv"),
+                  processDataset("fossil_fuels.csv"))
 
-
+write_csv(final_df, "energy_policy_lobbying.csv")
