@@ -4,8 +4,8 @@ import pandas as pd
 
 from config import api_key
 
-subtopic = "deportation"
-subtopic_edited = "deportation"
+subtopic = "renewable energy"
+subtopic_edited = "renewable_energy"
 
 url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=%s&filing_dt_posted_before=%s&filing_specific_lobbying_issues=%s" %("2011-01-01", "2021-12-31", subtopic)
 headers= {"Authorization": api_key}
@@ -50,4 +50,4 @@ def get_filings(url, is_first):
 
 #call the recursion on the original api & turn it into a csv
 df = get_filings(url, is_first)
-df.to_csv(f"{subtopic_edited}1.csv")
+df.to_csv(f"{subtopic_edited}.csv")
