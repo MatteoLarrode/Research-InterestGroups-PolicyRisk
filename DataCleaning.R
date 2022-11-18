@@ -3,11 +3,11 @@ library(dplyr)
 
 processDataset <- function(df){
   #import csv
-  df <- read_csv(df)
+  dataframe <- read_csv(df)
   
   #clean dataset (take care of NAs, change date format)
-  df <- select(df, -1)
-  df <- df %>%
+  dataframe <- select(dataframe, -1)
+  dataframe <- dataframe %>%
     rename(registrant_name = 1,
            client_name = 2,
            amount_reported = 3,
@@ -18,7 +18,7 @@ processDataset <- function(df){
   
   
   #new dataset: collapse by groups
-  df_groups <- df %>%
+  df_groups <- dataframe %>%
     group_by(registrant_name)
   
   #variables: how many times lobbied, total & avg amount, start & end years
@@ -29,7 +29,9 @@ processDataset <- function(df){
       total_amout = sum(amount_reported),
       start_year = min(filing_year),
       end_year = max(filing_year),
-      unique_years = n_distinct(filing_year))
+      unique_years = n_distinct(filing_year)) %>%
+    mutate(policy_issue = str_sub(df, end = -5))
   
+  View(df_summary)
   return(df_summary)
 }
