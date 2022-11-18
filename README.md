@@ -84,7 +84,7 @@ As illustrated by the example of biofuel policies in the EU mentioned above, and
 
 <p>
 
-Searching the publicly available [Congressional Record](https://www.congress.gov) and using terminology found in national polling surveys compiled by the Roper Center, we identified 8 subtopics of varying salience in the policy area of energy: renewable energy, solar power, hydropower, biofuels, nuclear power, hydropower, fossil fuels and electric vehicles. We collected data on all mentions of those specific legislation subject areas, over a span of ten years, from 2011-2021.
+Searching the publicly available [Congressional Record](https://www.congress.gov) and using terminology found in national polling surveys compiled by the Roper Center, we identified 7 subtopics of varying salience in the policy area of energy: renewable energy, solar energy, hydropower, biofuels, nuclear power, fossil fuels and electric vehicles. We collected data on all mentions of those specific legislation subject areas, over a span of ten years, from 2011-2021.
 </p>
 
 *Independent Variables - Political Risk*
