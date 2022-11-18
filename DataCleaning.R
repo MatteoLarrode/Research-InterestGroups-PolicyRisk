@@ -35,3 +35,11 @@ processDataset <- function(df){
   View(df_summary)
   return(df_summary)
 }
+
+
+final_df <- rbind(processDataset("wind.csv"), 
+                  processDataset("hydropower.csv"),
+                  processDataset("electric_vehicles.csv"),
+                  processDataset("biofuels.csv"))
+
+
