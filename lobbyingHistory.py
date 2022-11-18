@@ -4,8 +4,8 @@ import pandas as pd
 
 from config import api_key
 
-subtopic = "renewable energy"
-subtopic_edited = "renewable_energy"
+subtopic = "solar power"
+subtopic_edited = "solar_power"
 
 url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=%s&filing_dt_posted_before=%s&filing_specific_lobbying_issues=%s" %("2011-01-01", "2021-12-31", subtopic)
 headers= {"Authorization": api_key}
