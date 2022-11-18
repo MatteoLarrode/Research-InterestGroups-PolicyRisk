@@ -15,7 +15,6 @@ API requests & Roper iPolls (advanced text searching):
 
 "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=2011-01-01&filing_dt_posted_before=2021-12-31&filing_specific_lobbying_issues=%22wind+energy%22+OR+%22offshore+wind+power%22+OR+%28%22wind%22+AND+%22energy%22%29"
 
-
 5)Biofuels: "biofuels" OR "biofuel"
 
 "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=2011-01-01&filing_dt_posted_before=2021-12-31&filing_specific_lobbying_issues=%22biofuels%22+OR+%22biofuel%22"
