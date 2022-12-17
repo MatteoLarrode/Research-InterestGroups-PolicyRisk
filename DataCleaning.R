@@ -1,6 +1,8 @@
 library(tidyverse)
 library(dplyr)
 
+# Collapse data by registrant name ####
+
 processDataset <- function(df){
   #import csv
   dataframe <- read_csv(df)
@@ -16,7 +18,6 @@ processDataset <- function(df){
     replace(is.na(.), 0) %>%
     mutate(date_posted = as.Date(date_posted))
   
-  
   #new dataset: collapse by groups
   df_groups <- dataframe %>%
     group_by(registrant_name)
@@ -26,7 +27,7 @@ processDataset <- function(df){
     summarise(
       times_lobbied = n(),
       avg_amount = mean(amount_reported),
-      total_amout = sum(amount_reported),
+      total_amount = sum(amount_reported),
       start_year = min(filing_year),
       end_year = max(filing_year),
       unique_years = n_distinct(filing_year)) %>%
@@ -47,3 +48,9 @@ final_df <- rbind(processDataset("wind_power.csv"),
                   processDataset("fossil_fuels.csv"))
 
 write_csv(final_df, "energy_policy_lobbying.csv")
+
+dataframe_final <- read_csv("energy_policy_lobbying.csv")
+
+
+
+# Collapse data by year ####
