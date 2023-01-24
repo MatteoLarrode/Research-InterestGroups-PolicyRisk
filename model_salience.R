@@ -5,7 +5,7 @@ library(MASS)
 # Regression Model Salience x Lobbying behaviour
 
 # load salience dataset & rename the subtopic
-salience_df <- read_csv("salience.csv")
+salience_df <- read_csv("datasets/salience.csv")
 salience_df <- salience_df %>% 
   mutate(Subtopic=recode(Subtopic, 
                          'Renewable'='renewable_energy', 
@@ -19,7 +19,7 @@ salience_df <- salience_df %>%
 
 
 #load final dataset
-dataframe_final <- read_csv("energy_policy_lobbying.csv")
+dataframe_final <- read_csv("datasets/energy_policy_lobbying.csv")
 
 
 # Model 1: Total amount / times lobbied in the last 10 years depending on overall salience in last 10 years ####
