@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Salience &amp; Nascence of energy policy areas</h1>
 <section id="salience" class="level2">
 <h2 class="anchored" data-anchor-id="salience">Salience</h2>
-<div class="cell" data-hash="ExploratoryAnalysis_cache/html/unnamed-chunk-1_3fb140c37d91615f07e905e6b92707ec">
+<div class="cell" data-hash="ExploratoryAnalysis_cache/html/unnamed-chunk-1_d0c1d80515a5f84206383b641e25dc42">
 
 </div>
 <p>First, here are representations of the number of times a subtopic is mentioned in a poll question over the years. This is our proxy variable to <em>salience</em>.</p>
@@ -214,6 +214,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="ExploratoryAnalysis_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>We clearly see a perfect match between the amount of money spent on different energy policy areas, and on the amount of times they are lobbied for or against.</p>
+</section>
+<section id="relationship-between-salience-lobbying" class="level1">
+<h1>Relationship between salience &amp; lobbying</h1>
+<p>First, let us look whether or not salience is related to the number of times an issue is lobbied for, and on the money spent.</p>
+<div class="cell" data-hash="ExploratoryAnalysis_cache/html/unnamed-chunk-5_462f8081b85e7e4a898e0263077910bc">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse salience df to one row per subtopic (summing too)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>salience_reduced <span class="ot">&lt;-</span> salience_df <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Year, <span class="sc">-</span>Year_Date)<span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Subtopic)<span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(<span class="fu">funs</span>(sum))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#join the two datasets by subtopic</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>final_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(grouped_areas_df, salience_reduced, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"policy_issue"</span><span class="ot">=</span><span class="st">"Subtopic"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Looking at the dataframe, and sorting it by order of salience, we notice that it does NOT seem correlated to spending or activity.</p>
+<p>Next, it would be interesting to look at whether spending &amp; lobbying activity vary with salience.</p>
+<p>TO DO: web scrape the time-series of lobbying activity from 2011-2021 (will be VERY long &amp; heavy)</p>
 </section>
 
 </main>

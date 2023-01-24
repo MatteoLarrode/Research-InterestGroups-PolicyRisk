@@ -102,14 +102,14 @@ ggplot(data = grouped_areas_df, aes(x=policy_issue, y = total_amout))+
   theme_solarized()+
   theme(axis.text.x = element_text(angle = 65, vjust = 1, hjust=1))
 ```
-We clearly see a perfect match between the amount of money spent on different energy policy areas, and on the amount of times they are lobbied for or against. 
 
+We clearly see a perfect match between the amount of money spent on different energy policy areas, and on the amount of times they are lobbied for or against.
 
 # Relationship between salience & lobbying
 
-First, let us look whether or not salience is related to the number of times an issue is lobbied for, and on the money spent. 
+First, let us look whether or not salience is related to the number of times an issue is lobbied for, and on the money spent.
 
-```{r}
+```{r warning=FALSE}
 #collapse salience df to one row per subtopic (summing too)
 salience_reduced <- salience_df %>% 
   select(-Year, -Year_Date)%>%
@@ -120,7 +120,10 @@ salience_reduced <- salience_df %>%
 final_df <- left_join(grouped_areas_df, salience_reduced, by = c("policy_issue"="Subtopic"))
 
 ```
+
 Looking at the dataframe, and sorting it by order of salience, we notice that it does NOT seem correlated to spending or activity.
 
-
 Next, it would be interesting to look at whether spending & lobbying activity vary with salience.
+
+TO DO: web scrape the time-series of lobbying activity from 2011-2021
+  (will be VERY long & heavy)
