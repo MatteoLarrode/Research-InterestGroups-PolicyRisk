@@ -3,7 +3,7 @@
 .Rapp.history
 
 #api key
-config.py
+./api_scrape_lobbying/config.py
 
 # Session Data files
 .RData

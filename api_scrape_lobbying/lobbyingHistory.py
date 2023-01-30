@@ -4,7 +4,7 @@ import pandas as pd
 
 from config import api_key
 
-#subtopic = "solar energy"
+subtopic = "solar energy"
 subtopic_edited = "nuclear_energy"
 
 #url = "https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=%s&filing_dt_posted_before=%s&filing_specific_lobbying_issues=%s" %("2011-01-01", "2021-12-31", subtopic)
@@ -48,7 +48,7 @@ def get_filings(url, is_first):
         #concatenate the dataframes (they have the same columns)
         c1 = pd.concat([a1, b1])
         return c1
-    
+
 
 #call the recursion on the original api & turn it into a csv
 df = get_filings(url, is_first)
