@@ -22,7 +22,7 @@ library(ggplot2)
 library(ggthemes)
 library(lubridate)
 
-salience_df <- read_csv("datasets/salience.csv", show_col_types = FALSE)
+salience_df <- read_csv("data_wrangling/salience.csv", show_col_types = FALSE)
 salience_df <- salience_df %>% 
   mutate(Subtopic=recode(Subtopic, 
                          'Renewable'='renewable_energy', 
@@ -37,7 +37,9 @@ salience_df <- salience_df %>%
 salience_df$Year_Date <- lubridate::ymd(salience_df$Year, truncated = 2L)
 
 
-dataframe_final <- read_csv("datasets/energy_policy_lobbying.csv", show_col_types = FALSE)
+lobbying_grouped_df <- read_csv("data_wrangling/data_lobbying_collapsed.csv", show_col_types = FALSE)
+lobbying_df <- read_csv("data_wrangling/data_lobbying.csv", show_col_types = FALSE)
+
 ```
 
 First, here are representations of the number of times a subtopic is mentioned in a poll question over the years. This is our proxy variable to *salience*.
