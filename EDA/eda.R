@@ -48,11 +48,17 @@ studies_plot
 #Lobbying Activity #### -----------------------------------------
 data <- read_csv("data_wrangling/data_lobbying.csv")
 
-#example: biofuels
-biofuels_df <- data %>%
-  filter(policy_issue == "biofuels")%>%
-  group_by(filing_year)
+data_grouped_df <- data %>%
+  group_by(filing_year, policy_issue)%>%
+  summarize(total = n())
 
-biofuels_lobbying_plot <- ggplot(biofuels_df, aes(x = Year))+
-  geom_bar()
+lobbying_plot_line <- ggplot(data_grouped_df, aes(x=filing_year))+
+  geom_line(aes(y=total, col=policy_issue))+
+  labs(title="Lobbying action in energy policy subtopics (2011-2021)",
+       y = "Lobbying filings",
+       caption = "Source: https://lda.senate.gov/filings/public/filing/search/")+
+  scale_x_continuous(breaks = seq(from = 2011, to = 2021, by = 2))+
+  scale_color_gdocs()+
+  theme_solarized()
 
+lobbying_plot_line
