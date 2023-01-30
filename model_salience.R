@@ -53,7 +53,7 @@ Model1_2 <- lm(times_lobbied ~ NbrStudies, data = final_model1_df)
 summary(Model1_2) #not significant
 
 #negative binomial regression
-Model1_3 <- glm.nb(times_lobbied ~ NbrStudies, data=final_model1_df)
+Model1_3 <- glm.nb(times_lobbied ~ NbrStudies, data=final_df)
 summary(Model1_3) #not significant
 
 

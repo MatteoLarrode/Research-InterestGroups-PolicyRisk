@@ -125,5 +125,4 @@ Looking at the dataframe, and sorting it by order of salience, we notice that it
 
 Next, it would be interesting to look at whether spending & lobbying activity vary with salience.
 
-TO DO: web scrape the time-series of lobbying activity from 2011-2021
-  (will be VERY long & heavy)
+TO DO: web scrape the time-series of lobbying activity from 2011-2021 (will be VERY long & heavy)
