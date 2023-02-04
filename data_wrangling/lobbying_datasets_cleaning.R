@@ -43,7 +43,7 @@ data_lobbying <- rbind(
   wind_df
 )
 
-write.csv(data_lobbying, "data_lobbying.csv")
+write.csv(data_lobbying, "data_wrangling/data_lobbying.csv")
 
 
 # New dataset: collapse by groups #### ------------------------
@@ -60,3 +60,35 @@ df_summary <- df_groups %>%
     end_year = max(filing_year),
     unique_years = n_distinct(filing_year)) %>%
   mutate(policy_issue = str_sub(df, end = -5))
+
+
+# Merging: create final data ---------------------------------
+
+#salience
+salience_df <- read_csv("data_wrangling/salience.csv", show_col_types = FALSE)
+salience_df <- salience_df %>% 
+  mutate(Subtopic=recode(Subtopic, 
+                         'Renewable'='renewable_energy', 
+                         'Fossil'='fossil_fuels',
+                         'Nuclear'='nuclear_energy',
+                         'Solar'= 'solar_power',
+                         'Wind'='wind_power',
+                         'Hydropower' = 'hydropower',
+                         'Biofuels'='biofuels',
+                         'Evehicles'='electric_vehicles'))
+
+
+#lobbying
+lobbying_df <- read_csv("data_wrangling/data_lobbying.csv")
+
+lobbying_grouped_df <- lobbying_df %>%
+  group_by(filing_year, policy_issue)%>%
+  summarize(total_filings = n(),
+            total_spending = sum(amount_reported)) %>%
+  rename("Year" = filing_year,
+         "Subtopic" = policy_issue)
+
+
+#time-series: collapse salience & lobbying
+data <- merge(salience_df, lobbying_grouped_df, by=c("Year","Subtopic"))
+write_csv(data, "data_wrangling/final_dataset.csv")
