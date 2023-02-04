@@ -1,12 +1,12 @@
-# Exploratory Data Analysis #### -----------------------------------------
-library(dplyr)
-library(readr)
-library(tidyr)
+# Exploratory Data Analysis
+library(tidyverse)
 library(ggplot2)
 library(ggthemes)
 library(lubridate)
 
-# Salience #### -----------------------------------------
+# Load & clean datasets ---------------------------------
+
+#salience
 salience_df <- read_csv("data_wrangling/salience.csv", show_col_types = FALSE)
 salience_df <- salience_df %>% 
   mutate(Subtopic=recode(Subtopic, 
@@ -18,8 +18,27 @@ salience_df <- salience_df %>%
                          'Hydropower' = 'hydropower',
                          'Biofuels'='biofuels',
                          'Evehicles'='electric_vehicles'))
-#turn years into date format (just in case)
-salience_df$Year_Date <- lubridate::ymd(salience_df$Year, truncated = 2L)
+
+
+#lobbying
+lobbying_df <- read_csv("data_wrangling/data_lobbying.csv")
+
+lobbying_grouped_df <- lobbying_df %>%
+  group_by(filing_year, policy_issue)%>%
+  summarize(total_filings = n(),
+            total_spending = sum(amount_reported)) %>%
+  rename("Year" = filing_year,
+         "Subtopic" = policy_issue)
+
+
+#time-series: collapse salience & lobbying
+data <- merge(salience_df, lobbying_grouped_df, by=c("Year","Subtopic"))
+
+
+
+
+
+# Salience -----------------------------------------
 
 # plot total questions
 questions_plot <- ggplot(salience_df, aes(x=Year))+
@@ -46,14 +65,9 @@ studies_plot <- ggplot(salience_df, aes(x=Year))+
 studies_plot
 
 #Lobbying Activity #### -----------------------------------------
-data <- read_csv("data_wrangling/data_lobbying.csv")
 
-data_grouped_df <- data %>%
-  group_by(filing_year, policy_issue)%>%
-  summarize(total = n())
-
-lobbying_plot_line <- ggplot(data_grouped_df, aes(x=filing_year))+
-  geom_line(aes(y=total, col=policy_issue))+
+lobbying_plot_line <- ggplot(lobbying_grouped_df, aes(x=Year))+
+  geom_line(aes(y=total, col=Subtopic))+
   labs(title="Lobbying action in energy policy subtopics (2011-2021)",
        y = "Lobbying filings",
        caption = "Source: https://lda.senate.gov/filings/public/filing/search/")+
@@ -62,3 +76,8 @@ lobbying_plot_line <- ggplot(data_grouped_df, aes(x=filing_year))+
   theme_solarized()
 
 lobbying_plot_line
+
+
+#Lobbying Activity & Salience #### -----------------------------------------
+
+
