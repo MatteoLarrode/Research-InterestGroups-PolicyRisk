@@ -7,35 +7,39 @@ get_data <- function(subtopic, csvname) {
   
   url <- paste0("https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=2011-01-01&filing_dt_posted_before=2021-12-31&filing_specific_lobbying_issues=", subtopic)
   
-  headers <- add_headers("Authorization" = api_key)
+  headers <- add_headers("Authorization" = paste0("Token ",api_key))
   payload <- list()
   
-  data <- list()
-  while (url) {
-    response <- GET(url, headers = headers, body = payload)
-    results <- fromJSON(content(response, "text"), flatten = TRUE)$results
-    if (length(results) > 0) {
-      data <- c(data, lapply(results, function(item) {
-        list(
-          filing_uuid = item$filing_uuid,
-          registrant_name = item$registrant$name,
-          client_name = item$client$name,
-          expenses = item$expenses,
-          dt_posted = item$dt_posted,
-          filing_year = item$filing_year
-        )
-      }))
-    }
-    response_json <- fromJSON(content(response, "text"), flatten = TRUE)
-    if (exists("response_json$next")) {
-      url <- response_json$next
-    } else {
-      url <- NULL
-    }
-  }
+  df <- data.frame(Doubles=double(),
+                    Integers=integer(),
+                    Factors=factor(),
+                    Logicals=logical(),
+                    Characters=character(),
+                    stringsAsFactors=FALSE)
   
-  if (length(data) > 0) {
-    df <- bind_rows(data)
+
+  while(!is.null(url)){
+    get_response <- GET(url, headers = headers)
+    api_response <- fromJSON(content(get_response, "text"), flatten = TRUE)
+    results <- api_response$results
+    
+    if (length(results) > 0) {
+      data <- results %>%
+        select(filing_uuid, 
+               filing_year, 
+               filing_period_display, 
+               expenses, 
+               expenses_method_display, 
+               registrant.name, 
+               registrant.description, 
+               client.name, 
+               client.general_description)
+      
+      df <- rbind(df, data)
+      url <- api_response$`next`}
+    }
+
+  if (length(df) > 0) {
     write.csv(df, paste0(csvname), row.names = FALSE)
     print(paste0("Data for ", subtopic, " fetched and saved to file"))
   } else {

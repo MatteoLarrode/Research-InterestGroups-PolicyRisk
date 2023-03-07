@@ -10,33 +10,45 @@ url <- paste0("https://lda.senate.gov/api/v1/filings/?filing_dt_posted_after=201
 headers <- add_headers("Authorization" = paste0("Token ",api_key))
 
 get_response <- GET(url, headers = headers)
-api_response <- fromJSON(content(response, "text"), flatten = TRUE)
+api_response <- fromJSON(content(get_response, "text"), flatten = TRUE)
+results <- api_response$results
 
-if (length(results) > 0) {
-  data <- c(data, lapply(results, function(item) {
-    list(
-      filing_uuid = item$filing_uuid,
-      registrant_name = item$registrant$name,
-      client_name = item$client$name,
-      expenses = item$expenses,
-      dt_posted = item$dt_posted,
-      filing_year = item$filing_year)
-  }))}
 
-response_json <- fromJSON(content(response, "text"), flatten = TRUE)
-if (exists("response_json$next")) {
-  url <- response_json$next
-} else {
-  url <- NULL
-}
+df <- data.frame(filing_id=character(),
+                 filing_year=integer(),
+                 filing_period=character(),
+                 filing_period_display = character(),
+                 expenses=character(),
+                 expenses_method_display = character(),
+                 registrant_name = character(),
+                 registrant_description = character(),
+                 client_name = character(),
+                 client_description = character(),
+                 stringsAsFactors=FALSE)
+
+
+while(!is.null(url)){
+  get_response <- GET(url, headers = headers)
+  api_response <- fromJSON(content(get_response, "text"), flatten = TRUE)
+  results <- api_response$results
+  if (length(results) > 0) {
+    data <- results %>%
+      select(filing_uuid, 
+             filing_year, 
+             filing_period_display, 
+             expenses, 
+             expenses_method_display, 
+             registrant.name, 
+             registrant.description, 
+             client.name, 
+             client.general_description)
+    
+    df <- rbind(df, data)
+    
+    url <- api_response$`next`
+    }
 }
 
-if (length(data) > 0) {
-df <- bind_rows(data)
-write.csv(df, paste0(csvname), row.names = FALSE)
-print(paste0("Data for ", subtopic, " fetched and saved to file"))
-} else {
-print("No data available")
-}
+
 
 
