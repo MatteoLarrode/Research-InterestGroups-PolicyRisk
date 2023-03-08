@@ -49,5 +49,5 @@ get_data <- function(subtopic, csvname) {
   }
 }
 
-subtopic <- '"electric vehicles"'
+subtopic <- "biofuels"
 get_data(subtopic, "test.csv")
