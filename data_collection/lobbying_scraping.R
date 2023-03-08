@@ -22,6 +22,8 @@ get_data <- function(subtopic, csvname) {
     get_response <- GET(url, headers = headers)
     api_response <- fromJSON(content(get_response, "text"), flatten = TRUE)
     results <- api_response$results
+    print(api_response$count)
+    print(api_response$`next`)
     
     if (length(results) > 0) {
       data <- results %>%
@@ -47,5 +49,5 @@ get_data <- function(subtopic, csvname) {
   }
 }
 
-subtopic <- '"solar energy" OR "solar power" OR ("solar" AND "energy")'
-get_data(subtopic)
+subtopic <- '"electric vehicles"'
+get_data(subtopic, "test.csv")
